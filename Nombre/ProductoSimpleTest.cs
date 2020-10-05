@@ -78,7 +78,7 @@ namespace InventarioRestaurante.Core.Domain.Test
             var resultado = productoSimple.Retirar(5);
 
             //Validación o verificación 
-            Assert.AreEqual("la salida del producto: gaseosa litro, fue realizada, cantidad restante en inventario: 10 unidades.", resultado);
+            Assert.AreEqual("la salida del producto: gaseosa litro, fue realizada, cantidad restante en inventario: 10 unidades", resultado);
         }
 
         //Escenario 04: No Puede retirar cantidad igual a cero producto simple
@@ -114,39 +114,12 @@ namespace InventarioRestaurante.Core.Domain.Test
         //1  En caso de un producto sencillo la cantidad de la salida se le disminuirá 
         //   a la cantidad existente del producto.
         //Ejemplo
-        //Dado El usuario diligencia una salida de 5 unidades a un producto: código 002, 
-        //     nombre “pan perro caliente”, utilidad “preparación” costo 1000, precio 1500.
-        //     Con una cantidad de 40 unidades en el sistema.
-        //Cuando Va a retirar una cantidad de 5.
-        //Entonces El sistema presentará el mensaje "el producto seleccionado no es 
-        //         para venta directa".
-
-        [Test]
-        public void NoPuedeRetirarProductoSimpleErroneoTest()
-        {
-            //Preparar
-            var productoSimple = new ProductoSimple(codigo: 002, nombre: "pan perro caliente", utilidad: "preparacion", costo: 1000, precio: 1500);
-            productoSimple.Registrar(40);
-
-            //Accion
-            var resultado = productoSimple.Retirar(5);
-
-            //Validación o verificación 
-            Assert.AreEqual("el producto seleccionado no es para venta directa", resultado);
-        }
-
-        //Escenario 06: No Puede retirar producto simple erróneo
-        //HU2: COMO USUARIO QUIERO REGISTRAR LA SALIDA DE PRODUCTOS.
-        //Criterio de Aceptación:
-        //1  En caso de un producto sencillo la cantidad de la salida se le disminuirá 
-        //   a la cantidad existente del producto.
-        //Ejemplo
-        //Dado El usuario diligencia una salida a un producto: código 001, 
-        //     nombre “gaseosa litro”, utilidad “ventaDirecta” costo 2000, precio 5000. 
+        //Dado El usuario diligencia una salida de 5 unidades a un producto: código 001, 
+        //     nombre “gaseosa litro”, utilidad “ventaDirecta” costo 2000, precio 5000.
         //     Con una cantidad de 0 unidades en el sistema.
-        //Cuando Va a registrar una cantidad de 2.
-        //Entonces El sistema presentará el mensaje "el producto que desea retirar 
-        //         no tiene existencia".
+        //Cuando Va a retirar una cantidad de 2.
+        //Entonces El sistema presentará el mensaje "el producto que desea retirar no tiene
+        //         existencia".
 
         [Test]
         public void NoPuedeRetirarProductoSimpleSinExistenciaTest()
@@ -160,5 +133,63 @@ namespace InventarioRestaurante.Core.Domain.Test
             //Validación o verificación 
             Assert.AreEqual("el producto que desea retirar no tiene existencia", resultado);
         }
+
+
+        //Escenario 06: No Puede retirar producto simple erróneo
+        //HU2: COMO USUARIO QUIERO REGISTRAR LA SALIDA DE PRODUCTOS.
+        //Criterio de Aceptación:
+        //1  En caso de un producto sencillo la cantidad de la salida se le disminuirá 
+        //   a la cantidad existente del producto.
+        //Ejemplo
+        //Dado El usuario diligencia una salida a un producto: código 002, 
+        //     nombre “pan perro caliente”, utilidad “preparación” costo 1000, precio 1500. 
+        //     Con una cantidad de 40 unidades en el sistema.
+        //Cuando Va a registrar una cantidad de 5.
+        //Entonces El sistema presentará el mensaje "el producto seleccionado no es para 
+        //         venta directa".
+
+        [Test]
+        public void NoPuedeRetirarProductoSimpleErroneoTest()
+        {
+            //Preparar
+            var productoSimple = new ProductoSimple(codigo: 002, nombre: "pan perro caliente", utilidad: "preparación", costo: 1000, precio: 1500);
+            productoSimple.Registrar(40);
+
+            //Accion
+            var resultado = productoSimple.Retirar(5);
+
+            //Validación o verificación 
+            Assert.AreEqual("el producto seleccionado no es para venta directa", resultado);
+        }
+
+
+
+        //Escenario 07: No Puede retirar cantidad mayor que inventario disponible
+        //HU2: COMO USUARIO QUIERO REGISTRAR LA SALIDA DE PRODUCTOS.
+        //Criterio de Aceptación:
+        //1  En caso de un producto sencillo la cantidad de la salida se le disminuirá 
+        //   a la cantidad existente del producto.
+        //Ejemplo
+        //Dado El usuario diligencia una salida de 5 unidades de un producto: código 001, 
+        //     nombre “gaseosa litro”, utilidad “ventaDirecta” costo 2000, precio 5000. 
+        //     Con una cantidad de 5 unidades en el sistema.
+        //Cuando Va a registrar una cantidad de 7.
+        //Entonces El sistema presentará el mensaje "el producto seleccionado no es para 
+        //         venta directa".
+
+        [Test]
+        public void NoPuedeRetirarCantidadMayorQueInventarioTest()
+        {
+            //Preparar
+            var productoSimple = new ProductoSimple(codigo: 001, nombre: "gaseosa litro", utilidad: "ventaDirecta", costo: 2000, precio: 5000);
+            productoSimple.Registrar(5);
+
+            //Accion
+            var resultado = productoSimple.Retirar(7);
+
+            //Validación o verificación 
+            Assert.AreEqual("la cantidad solicitada es mayor que la cantidad registrada en el sistema", resultado);
+        }
+
     }
 }
