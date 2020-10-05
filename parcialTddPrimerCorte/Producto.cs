@@ -28,5 +28,10 @@ namespace parcialTddPrimerCorte
             return "";
         }
 
+        public virtual string Retirar(decimal cantidad)
+        {
+            return "";
+        }
+
 }
 }

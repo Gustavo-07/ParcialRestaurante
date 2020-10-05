@@ -80,5 +80,31 @@ namespace InventarioRestaurante.Core.Domain.Test
             //Validación o verificación 
             Assert.AreEqual("la salida del producto: gaseosa litro, fue realizada, cantidad restante en inventario: 10 unidades.", resultado);
         }
+
+        //Escenario 04: No Puede retirar cantidad igual a cero producto simple
+        //HU1: COMO USUARIO QUIERO REGISTRAR LA SALIDA DE PRODUCTOS.
+        //Criterio de Aceptación:
+        //1  La cantidad de la salida de debe ser mayor a 0.
+        //Ejemplo
+        //Dado El usuario diligencia una salida a un producto: código 001, 
+        //     nombre “gaseosa litro”, utilidad “ventaDirecta” costo 2000, precio 5000. 
+        //     Con una cantidad de 15 unidades en el sistema.
+        //Cuando Va a registrar una cantidad de 0.
+        //Entonces El sistema presentará el mensaje "la cantidad para el registro de 
+        //         salida de productos es incorrecta".
+
+        [Test]
+        public void NoPuedeRetirarCantidadigualACeroProductoSimpleTest()
+        {
+            //Preparar
+            var productoSimple = new ProductoSimple(codigo: 001, nombre: "gaseosa litro", utilidad: "ventaDirecta", costo: 2000, precio: 5000);
+            productoSimple.Registrar(15);
+
+            //Accion
+            var resultado = productoSimple.Retirar(0);
+
+            //Validación o verificación 
+            Assert.AreEqual("la cantidad para el registro de salida de productos es incorrecta",resultado);
+        }
     }
 }

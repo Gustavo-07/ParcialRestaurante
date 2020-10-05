@@ -22,5 +22,13 @@ namespace InventarioRestaurante.Core.Domain
             return "la cantidad para el registro del productos es incorrecta";
 
         }
+
+        public override string Retirar(decimal cantidad)
+        {
+            if (Estado.Equals("nodisponible"))
+            {
+
+            }
+        }
     }
 }
