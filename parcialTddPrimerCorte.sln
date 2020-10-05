@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1259
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventarioRestaurante.Core.Domain", "parcialTddPrimerCorte\InventarioRestaurante.Core.Domain.csproj", "{EF93BFFF-0FA2-4A15-A537-17BE466B8B12}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventarioRestaurante.Core.Domain.Test", "Nombre\InventarioRestaurante.Core.Domain.Test.csproj", "{B8414661-F7A8-41F5-ACAA-8CDDEB9E7AAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF93BFFF-0FA2-4A15-A537-17BE466B8B12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF93BFFF-0FA2-4A15-A537-17BE466B8B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF93BFFF-0FA2-4A15-A537-17BE466B8B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF93BFFF-0FA2-4A15-A537-17BE466B8B12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8414661-F7A8-41F5-ACAA-8CDDEB9E7AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8414661-F7A8-41F5-ACAA-8CDDEB9E7AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8414661-F7A8-41F5-ACAA-8CDDEB9E7AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8414661-F7A8-41F5-ACAA-8CDDEB9E7AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E6AE8A9-0942-45A2-B84B-89F14FF2D652}
+	EndGlobalSection
+EndGlobal
