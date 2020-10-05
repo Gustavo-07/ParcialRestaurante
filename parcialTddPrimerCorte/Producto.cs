@@ -4,12 +4,12 @@ namespace parcialTddPrimerCorte
 {
     public abstract class Producto
     {
-        protected Producto(decimal codigo, string nombre, string ventaDirecta, decimal costo, decimal precio)
+        protected Producto(decimal codigo, string nombre, string utilidad, decimal costo, decimal precio)
         {
             Codigo = codigo;
             Nombre = nombre;
             Cantidad = 0;
-            VentaDirecta = ventaDirecta;
+            Utilidad = utilidad;
             Costo = costo;
             Precio = precio;
             Estado = "nodisponible";
@@ -18,7 +18,7 @@ namespace parcialTddPrimerCorte
         public decimal Codigo { get; }
         public string Nombre { get; }
         public decimal Cantidad { get; set; }
-        public string VentaDirecta{ get; }
+        public string Utilidad{ get; }
         public decimal Costo { get; }
         public decimal Precio { get; }
         public string Estado { get; set;  }

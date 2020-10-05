@@ -7,7 +7,7 @@ namespace InventarioRestaurante.Core.Domain
 {
     public class ProductoSimple : Producto
     {
-        public ProductoSimple(decimal codigo, string nombre, string ventaDirecta, decimal costo, decimal precio) : base(codigo, nombre, ventaDirecta, costo, precio)
+        public ProductoSimple(decimal codigo, string nombre, string utilidad, decimal costo, decimal precio) : base(codigo, nombre, utilidad, costo, precio)
         {
         }
 
