@@ -1,0 +1,9 @@
+C:\Users\Ricky\source\repos\parcialTddPrimerCorte\parcialTddPrimerCorte\bin\Debug\netcoreapp2.1\InventarioRestaurante.Core.Domain.deps.json
+C:\Users\Ricky\source\repos\parcialTddPrimerCorte\parcialTddPrimerCorte\bin\Debug\netcoreapp2.1\InventarioRestaurante.Core.Domain.dll
+C:\Users\Ricky\source\repos\parcialTddPrimerCorte\parcialTddPrimerCorte\bin\Debug\netcoreapp2.1\InventarioRestaurante.Core.Domain.pdb
+C:\Users\Ricky\source\repos\parcialTddPrimerCorte\parcialTddPrimerCorte\obj\Debug\netcoreapp2.1\InventarioRestaurante.Core.Domain.csprojAssemblyReference.cache
+C:\Users\Ricky\source\repos\parcialTddPrimerCorte\parcialTddPrimerCorte\obj\Debug\netcoreapp2.1\InventarioRestaurante.Core.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Ricky\source\repos\parcialTddPrimerCorte\parcialTddPrimerCorte\obj\Debug\netcoreapp2.1\InventarioRestaurante.Core.Domain.AssemblyInfoInputs.cache
+C:\Users\Ricky\source\repos\parcialTddPrimerCorte\parcialTddPrimerCorte\obj\Debug\netcoreapp2.1\InventarioRestaurante.Core.Domain.AssemblyInfo.cs
+C:\Users\Ricky\source\repos\parcialTddPrimerCorte\parcialTddPrimerCorte\obj\Debug\netcoreapp2.1\InventarioRestaurante.Core.Domain.dll
+C:\Users\Ricky\source\repos\parcialTddPrimerCorte\parcialTddPrimerCorte\obj\Debug\netcoreapp2.1\InventarioRestaurante.Core.Domain.pdb
