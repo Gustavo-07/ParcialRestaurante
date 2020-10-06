@@ -7,21 +7,27 @@ namespace InventarioRestaurante.Core.Domain
 {
     public class ProductoSimple : Producto
     {
-        
+        private decimal Cantidad { get; set; }
+        private string Utilidad { get; }
+        string Estado { get; set; }
         private decimal CostoProducto { get; set; }
         private decimal PrecioVenta { get; set; }
 
-        public ProductoSimple(decimal codigo, string nombre, string utilidad, decimal costo, decimal precio) : base(codigo, nombre, utilidad, costo, precio)
+        public ProductoSimple(decimal codigo, string nombre, string utilidad, decimal costo, decimal precio) : base(codigo, nombre, costo, precio)
         {
+            Cantidad = 0;
+            Utilidad = utilidad;
+            Estado = "nodisponible";
         }
 
-        public override string Registrar(decimal cantidad)
+
+        public override string Registrar(decimal cantidadRegistro)
         {
-            if (cantidad > 0)
+            if (cantidadRegistro > 0)
             {
-                Cantidad = cantidad;
+                Cantidad += cantidadRegistro;
                 Estado = "disponible";
-                return $"el registro del producto: {Nombre} fue realizado, cantidad: {cantidad} ";
+                return $"el registro del producto: {Nombre} fue realizado, cantidad: {cantidadRegistro} ";
             }
             return "la cantidad para el registro del productos es incorrecta";
 
